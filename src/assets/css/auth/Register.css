@@ -1,0 +1,317 @@
+
+.register-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 45px 20px;
+    background:
+            radial-gradient(
+                    circle at 5% 5%,
+                    rgba(99, 102, 241, 0.12),
+                    transparent 32%
+            ),
+            radial-gradient(
+                    circle at 95% 90%,
+                    rgba(59, 130, 246, 0.10),
+                    transparent 32%
+            ),
+            #f8fafc;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.register-page *,
+.register-page *::before,
+.register-page *::after {
+    box-sizing: border-box;
+}
+
+.register-card {
+    width: 100%;
+    max-width: 620px;
+    padding: 36px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 22px;
+    box-shadow:
+            0 20px 50px rgba(15, 23, 42, 0.06),
+            0 2px 8px rgba(15, 23, 42, 0.03);
+}
+
+.register-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    color: #3730a3;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+}
+
+.register-brand-icon {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    color: #ffffff;
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    border-radius: 13px;
+    box-shadow: 0 6px 16px rgba(79, 70, 229, 0.22);
+}
+
+.register-brand-icon svg {
+    width: 25px;
+    height: 25px;
+}
+
+.register-heading {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.register-heading h1 {
+    margin: 0 0 10px;
+    color: #111827;
+    font-size: 29px;
+    font-weight: 750;
+    letter-spacing: -0.8px;
+}
+
+.register-heading p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+}
+
+.register-section-title {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 19px;
+}
+
+.register-step {
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    color: #4338ca;
+    background: #eef2ff;
+    border: 1px solid #e0e7ff;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.register-section-title h2 {
+    margin: 0 0 5px;
+    color: #1f2937;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.register-section-title p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.register-fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 18px;
+}
+
+.register-fields .form-input-group {
+    gap: 8px;
+}
+
+.register-fields .form-input-label {
+    font-size: 13px;
+}
+
+.register-fields .form-input {
+    width: 100%;
+    min-height: 47px;
+    padding: 11px 13px;
+    border-color: #e5e7eb;
+    border-radius: 10px;
+    background: #f9fafb;
+    font-size: 13px;
+}
+
+.register-fields .form-input:hover {
+    border-color: #c7d2fe;
+}
+
+.register-fields .form-input:focus {
+    border-color: #4f46e5;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.10);
+}
+
+.register-fields .form-input-invalid {
+    border-color: #dc2626;
+}
+
+.register-fields .form-input-group:nth-child(5),
+.register-fields .form-input-group:nth-child(6),
+.register-fields .form-input-group:nth-child(7) {
+    grid-column: 1 / -1;
+}
+
+.register-teacher-section {
+    padding: 23px;
+    background: #fafaff;
+    border: 1px solid #e5e7eb;
+    border-radius: 15px;
+}
+
+.register-teacher-section .register-section-title {
+    margin-bottom: 22px;
+}
+
+.register-teacher-section .register-fields {
+    grid-template-columns: 1fr;
+    gap: 18px;
+}
+
+.register-success-message {
+    margin: 0;
+    padding: 12px 14px;
+    color: #166534;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 10px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.register-api-error {
+    padding: 12px 14px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 10px;
+    overflow-wrap: anywhere;
+}
+
+.register-submit {
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 13px 18px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #4f46e5, #4338ca);
+    border: none;
+    border-radius: 11px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(79, 70, 229, 0.20);
+    transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease,
+            opacity 0.2s ease;
+}
+
+.register-submit svg {
+    width: 19px;
+    height: 19px;
+}
+
+.register-submit:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 9px 20px rgba(79, 70, 229, 0.28);
+}
+
+.register-submit:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+    box-shadow: none;
+}
+
+.register-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 26px;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.register-footer a {
+    color: #4f46e5;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.register-footer a:hover {
+    color: #3730a3;
+    text-decoration: underline;
+}
+
+.register-copyright {
+    margin: 28px 0 0;
+    padding-top: 19px;
+    color: #9ca3af;
+    border-top: 1px solid #f3f4f6;
+    font-size: 11px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .register-page {
+        padding: 20px 12px;
+    }
+
+    .register-card {
+        padding: 25px 19px;
+        border-radius: 18px;
+    }
+
+    .register-brand {
+        margin-bottom: 25px;
+        font-size: 23px;
+    }
+
+    .register-heading h1 {
+        font-size: 25px;
+    }
+
+    .register-fields {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .register-fields .form-input-group {
+        grid-column: 1 / -1;
+    }
+
+    .register-teacher-section {
+        padding: 17px 13px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .register-submit {
+        transition: none;
+    }
+}

@@ -92,3 +92,30 @@ export const sheetFileValidation = {
         return true;
     },
 };
+
+export const examFileValidation = {
+    validate: (files) => {
+        // Exam is optional; required validation is handled by the form
+        if (!files?.[0]) {
+            return true;
+        }
+
+        const file = files[0];
+
+        const allowedType =
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
+
+        if (
+            file.type !== allowedType &&
+            !file.name.toLowerCase().endsWith(".docx")
+        ) {
+            return "Only Word (.docx) files are allowed";
+        }
+
+        if (file.size > 10 * 1024 * 1024) {
+            return "Exam file must not exceed 10MB";
+        }
+
+        return true;
+    },
+};

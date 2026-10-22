@@ -1,0 +1,405 @@
+.teacher-students-page {
+    padding: 28px;
+    color: #172033;
+}
+
+.students-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.students-eyebrow {
+    color: #64748b;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.students-header h1 {
+    margin: 8px 0;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.students-header p {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.students-total {
+    min-width: 130px;
+    padding: 16px 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.students-total span {
+    color: #64748b;
+    font-size: 12px;
+}
+
+.students-total strong {
+    font-size: 26px;
+}
+
+.students-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 20px;
+}
+
+.student-card {
+    padding: 22px;
+    background: #fff;
+    border: 1px solid #e5eaf2;
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgb(15 23 42 / 4%);
+    min-width: 0;
+}
+
+.student-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.student-avatar {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    background: #e9edff;
+    color: #4f46e5;
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.student-status {
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.status-active {
+    color: #15803d;
+    background: #dcfce7;
+}
+
+.status-blocked {
+    color: #b91c1c;
+    background: #fee2e2;
+}
+
+.student-info {
+    margin: 18px 0;
+}
+
+.student-info h2 {
+    margin: 0 0 7px;
+    font-size: 19px;
+    overflow-wrap: anywhere;
+}
+
+.student-email,
+.student-id {
+    margin: 6px 0;
+    color: #64748b;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.student-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+.student-stat {
+    padding: 13px;
+    border-radius: 12px;
+    background: #f8fafc;
+}
+
+.student-stat span {
+    display: block;
+    margin-bottom: 7px;
+    color: #64748b;
+    font-size: 12px;
+}
+
+.student-stat strong {
+    font-size: 18px;
+}
+
+.student-violations {
+    border-top: 1px solid #e9edf4;
+    padding-top: 17px;
+}
+
+.student-violations h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 14px;
+    font-size: 15px;
+}
+
+.student-violations h3 span {
+    display: grid;
+    place-items: center;
+    min-width: 25px;
+    height: 25px;
+    padding: 0 6px;
+    border-radius: 8px;
+    background: #f1f5f9;
+    font-size: 12px;
+}
+
+.no-violations {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.violations-list {
+    display: grid;
+    gap: 10px;
+}
+
+.violation-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px;
+    background: #fff7ed;
+    border: 1px solid #ffedd5;
+    border-radius: 10px;
+}
+
+.violation-item strong {
+    display: block;
+    color: #9a3412;
+    font-size: 13px;
+    text-transform: capitalize;
+    overflow-wrap: anywhere;
+}
+
+.violation-item p,
+.violation-item time {
+    margin: 5px 0 0;
+    color: #78716c;
+    font-size: 11px;
+}
+
+.violation-item time {
+    flex-shrink: 0;
+}
+
+.students-btn {
+    border: 0;
+    border-radius: 10px;
+    padding: 11px 15px;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.students-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.students-btn-unblock {
+    width: 100%;
+    margin-top: 18px;
+    color: #fff;
+    background: #15803d;
+}
+
+.students-btn-unblock:hover:not(:disabled) {
+    background: #166534;
+}
+
+.students-btn-primary {
+    color: #fff;
+    background: #4f46e5;
+}
+
+.students-btn-secondary {
+    color: #334155;
+    background: #e2e8f0;
+}
+
+.students-empty,
+.students-state {
+    padding: 60px 20px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #e5eaf2;
+    border-radius: 18px;
+}
+
+.students-empty-icon {
+    font-size: 38px;
+    color: #64748b;
+}
+
+.students-empty h2,
+.students-state h2 {
+    margin-bottom: 8px;
+}
+
+.students-empty p,
+.students-state p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.students-error {
+    color: #b91c1c;
+}
+
+.students-alert {
+    padding: 14px 16px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.students-alert-success {
+    color: #166534;
+    background: #dcfce7;
+    border: 1px solid #bbf7d0;
+}
+
+.students-alert-error {
+    color: #b91c1c;
+    background: #fee2e2;
+    border: 1px solid #fecaca;
+}
+
+.students-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background: rgb(15 23 42 / 55%);
+}
+
+.students-confirm-modal {
+    width: 100%;
+    max-width: 420px;
+    padding: 28px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 20px 60px rgb(0 0 0 / 20%);
+    animation: students-modal-in 0.2s ease-out;
+}
+
+.confirm-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    color: #15803d;
+    background: #dcfce7;
+    font-size: 25px;
+}
+
+.students-confirm-modal h2 {
+    margin: 20px 0 10px;
+    font-size: 21px;
+}
+
+.students-confirm-modal > p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.confirm-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.confirm-actions .students-btn {
+    flex: 1;
+}
+
+.students-spinner {
+    width: 30px;
+    height: 30px;
+    margin: 0 auto 12px;
+    border: 3px solid #e2e8f0;
+    border-top-color: #4f46e5;
+    border-radius: 50%;
+    animation: students-spin 0.7s linear infinite;
+}
+
+@keyframes students-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes students-modal-in {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .teacher-students-page {
+        padding: 18px 12px;
+    }
+
+    .students-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .students-total {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .students-header h1 {
+        font-size: 25px;
+    }
+
+    .students-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .student-card {
+        padding: 17px;
+    }
+
+    .students-confirm-modal {
+        padding: 22px;
+    }
+}

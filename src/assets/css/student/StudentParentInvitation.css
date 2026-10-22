@@ -1,0 +1,387 @@
+.parent-invitation-page,
+.parent-invitation-page * {
+    box-sizing: border-box;
+}
+
+.parent-invitation-page {
+    width: 100%;
+    min-width: 0;
+    min-height: 100%;
+    padding: 40px 24px 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    font-family: inherit;
+    color: #172033;
+}
+
+.parent-invitation-header {
+    width: 100%;
+    max-width: 620px;
+    text-align: center;
+}
+
+.parent-invitation-eyebrow {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 6px 11px;
+    border: 1px solid #dbeafe;
+    border-radius: 6px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.parent-invitation-header h1 {
+    margin: 0 0 12px;
+    color: #172033;
+    font-size: clamp(26px, 3vw, 34px);
+    font-weight: 750;
+    line-height: 1.25;
+    letter-spacing: -0.8px;
+}
+
+.parent-invitation-header p {
+    max-width: 540px;
+    margin: 0 auto;
+    color: #667085;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.parent-invitation-card {
+    width: 100%;
+    max-width: 520px;
+    min-width: 0;
+    padding: 32px;
+    overflow: hidden;
+    border: 1px solid #e5eaf2;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 8px 30px rgba(23, 32, 51, 0.06);
+}
+
+.parent-invitation-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.parent-invitation-icon svg {
+    display: block;
+    width: 34px;
+    height: 34px;
+}
+
+.parent-invitation-card-heading {
+    margin-bottom: 26px;
+    text-align: center;
+}
+
+.parent-invitation-card-heading h2 {
+    margin: 0 0 10px;
+    color: #172033;
+    font-size: 21px;
+    font-weight: 750;
+    line-height: 1.4;
+}
+
+.parent-invitation-card-heading p {
+    margin: 0;
+    color: #667085;
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+.parent-invitation-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+}
+
+.parent-invitation-form label {
+    display: block;
+    margin-bottom: 2px;
+    color: #344054;
+    font-size: 13px;
+    font-weight: 650;
+}
+
+.parent-invitation-form input {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    height: 48px;
+    margin: 0;
+    padding: 0 14px;
+    border: 1px solid #d0d5dd;
+    border-radius: 9px;
+    outline: none;
+    background: #ffffff;
+    color: #172033;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: normal;
+    box-shadow: none;
+    transition:
+            border-color 0.2s ease,
+            box-shadow 0.2s ease;
+}
+
+.parent-invitation-form input::placeholder {
+    color: #98a2b3;
+    opacity: 1;
+}
+
+.parent-invitation-form input:hover {
+    border-color: #98a2b3;
+}
+
+.parent-invitation-form input:focus {
+    border-color: #3978f6;
+    box-shadow: 0 0 0 3px rgba(57, 120, 246, 0.12);
+}
+
+.parent-invitation-form button {
+    width: 100%;
+    min-width: 0;
+    min-height: 48px;
+    margin: 8px 0 0;
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid #2563eb;
+    border-radius: 9px;
+    background: #2563eb;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4;
+    cursor: pointer;
+    box-shadow: none;
+    transition:
+            background 0.2s ease,
+            border-color 0.2s ease,
+            transform 0.2s ease;
+}
+
+.parent-invitation-form button:hover:not(:disabled) {
+    border-color: #1d4ed8;
+    background: #1d4ed8;
+}
+
+.parent-invitation-form button:active:not(:disabled) {
+    transform: scale(0.99);
+}
+
+.parent-invitation-form button:focus-visible {
+    outline: 3px solid rgba(59, 130, 246, 0.3);
+    outline-offset: 3px;
+}
+
+.parent-invitation-form button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.parent-invitation-spinner {
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: parent-invitation-spin 0.7s linear infinite;
+}
+
+@keyframes parent-invitation-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.parent-invitation-error {
+    margin: 4px 0;
+    padding: 12px 14px;
+    border: 1px solid #fecdca;
+    border-radius: 8px;
+    background: #fef3f2;
+    color: #b42318;
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.parent-invitation-success {
+    margin-top: 24px;
+    padding: 20px;
+    border: 1px solid #abefc6;
+    border-radius: 12px;
+    background: #f6fef9;
+}
+
+.parent-invitation-success-title {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.parent-invitation-check {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #dcfae6;
+    color: #067647;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.parent-invitation-success-title h3 {
+    margin: 0 0 5px;
+    color: #067647;
+    font-size: 16px;
+    font-weight: 750;
+}
+
+.parent-invitation-success-title p {
+    margin: 0;
+    color: #475467;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.parent-invitation-details {
+    padding: 4px 14px;
+    border: 1px solid #e4f3e9;
+    border-radius: 9px;
+    background: #ffffff;
+}
+
+.parent-invitation-detail-row {
+    min-width: 0;
+    padding: 12px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    border-bottom: 1px solid #eaecf0;
+    font-size: 13px;
+}
+
+.parent-invitation-detail-row:last-child {
+    border-bottom: none;
+}
+
+.parent-invitation-detail-row > span:first-child {
+    flex-shrink: 0;
+    color: #667085;
+}
+
+.parent-invitation-detail-row strong {
+    min-width: 0;
+    color: #344054;
+    font-weight: 650;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+.parent-invitation-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 7px;
+    color: #b54708;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: right;
+}
+
+.parent-invitation-status-dot {
+    width: 7px;
+    height: 7px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #f79009;
+}
+
+.parent-invitation-note {
+    margin: 14px 0 0;
+    color: #475467;
+    font-size: 12px;
+    line-height: 1.75;
+}
+
+.parent-invitation-footnote {
+    margin-top: 24px;
+    padding-top: 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    border-top: 1px solid #eaecf0;
+    color: #667085;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.parent-invitation-footnote > span:first-child {
+    flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+    .parent-invitation-page {
+        padding: 28px 16px 40px;
+        gap: 24px;
+    }
+
+    .parent-invitation-header h1 {
+        font-size: 27px;
+    }
+
+    .parent-invitation-header p {
+        font-size: 14px;
+    }
+
+    .parent-invitation-card {
+        padding: 24px 18px;
+        border-radius: 14px;
+    }
+
+    .parent-invitation-card-heading h2 {
+        font-size: 19px;
+    }
+
+    .parent-invitation-success {
+        padding: 15px;
+    }
+
+    .parent-invitation-detail-row {
+        gap: 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .parent-invitation-page *,
+    .parent-invitation-page *::before,
+    .parent-invitation-page *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
